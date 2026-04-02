@@ -1,6 +1,5 @@
 import { ScrollView, StyleSheet } from "react-native";
 
-import CategoryRow from "@/components/home/CategoryRow";
 import NearbyShopSection from "@/components/home/NearbyShopSection";
 import PopularShopSection from "@/components/home/PopularShopSection";
 import RecentReviewSection from "@/components/home/RecentReviewSection";
@@ -10,8 +9,6 @@ export default function Index() {
   return (
     <ScrollView style={styles.container}>
       <SearchBar />
-
-      <CategoryRow />
 
       <NearbyShopSection />
 
