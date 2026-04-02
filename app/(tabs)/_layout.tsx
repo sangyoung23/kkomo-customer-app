@@ -7,6 +7,10 @@ export default function Layout() {
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: "#FF7A00",
+        tabBarStyle: {
+          height: 60,
+          paddingBottom: 5,
+        },
       }}
     >
       <Tabs.Screen
@@ -20,11 +24,11 @@ export default function Layout() {
       />
 
       <Tabs.Screen
-        name="search"
+        name="map"
         options={{
-          title: "검색",
+          title: "지도",
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="search" size={size} color={color} />
+            <Ionicons name="map" size={size} color={color} />
           ),
         }}
       />
@@ -42,7 +46,7 @@ export default function Layout() {
       <Tabs.Screen
         name="mypage"
         options={{
-          title: "마이",
+          title: "나의 페이지",
           tabBarIcon: ({ color, size }) => (
             <Ionicons name="person" size={size} color={color} />
           ),
