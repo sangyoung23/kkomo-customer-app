@@ -1,10 +1,17 @@
-import { StyleSheet, View } from "react-native";
-import AppText from "../common/AppText";
+import { Image, StyleSheet, View } from "react-native";
+import AppTitle from "../common/AppTitle";
 
 export default function RecentReviewSection() {
   return (
     <View style={styles.container}>
-      <AppText style={styles.title}>최근 리뷰</AppText>
+      <AppTitle>최근 리뷰</AppTitle>
+
+      <Image
+        source={{
+          uri: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b",
+        }}
+        style={styles.image}
+      />
     </View>
   );
 }
@@ -15,8 +22,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
   },
 
-  title: {
-    fontSize: 18,
-    fontFamily: "Poppins_600SemiBold",
+  image: {
+    marginTop: 14,
+    height: 150,
+    borderRadius: 20,
   },
 });
