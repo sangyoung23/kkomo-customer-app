@@ -21,14 +21,12 @@ export default function ShopCardHorizontal({
       <View style={styles.imageWrapper}>
         <Image source={{ uri: image }} style={styles.image} />
 
-        {/* 거리 badge */}
-        <View style={styles.distanceBadge}>
-          <AppText style={styles.distanceText}>{distance}</AppText>
+        <View style={[styles.badge, styles.distanceBadge]}>
+          <AppText style={styles.badgeText}>{distance}</AppText>
         </View>
 
-        {/* 평점 badge */}
-        <View style={styles.ratingBadge}>
-          <AppText style={styles.ratingText}>⭐ {rating}</AppText>
+        <View style={[styles.badge, styles.ratingBadge]}>
+          <AppText style={styles.badgeText}>⭐ {rating}</AppText>
         </View>
       </View>
 
@@ -55,35 +53,25 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
 
-  distanceBadge: {
+  badge: {
     position: "absolute",
-    top: 8,
-    right: 8,
-
     backgroundColor: "#fff",
     paddingHorizontal: 8,
     paddingVertical: 3,
-
     borderRadius: 10,
   },
 
-  distanceText: {
-    fontSize: 11,
+  distanceBadge: {
+    top: 8,
+    right: 8,
   },
 
   ratingBadge: {
-    position: "absolute",
     bottom: 8,
     left: 8,
-
-    backgroundColor: "#fff",
-    paddingHorizontal: 8,
-    paddingVertical: 3,
-
-    borderRadius: 10,
   },
 
-  ratingText: {
+  badgeText: {
     fontSize: 11,
   },
 

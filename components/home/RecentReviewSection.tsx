@@ -1,15 +1,16 @@
 import { Image, StyleSheet, View } from "react-native";
-import AppTitle from "../common/AppTitle";
+
+import { MOCK_SHOPS } from "@/data/mockShops";
+
+import SectionHeading from "./SectionHeading";
 
 export default function RecentReviewSection() {
   return (
     <View style={styles.container}>
-      <AppTitle>최근 리뷰</AppTitle>
+      <SectionHeading>최근 리뷰</SectionHeading>
 
       <Image
-        source={{
-          uri: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b",
-        }}
+        source={{ uri: MOCK_SHOPS[0].image }}
         style={styles.image}
       />
     </View>
